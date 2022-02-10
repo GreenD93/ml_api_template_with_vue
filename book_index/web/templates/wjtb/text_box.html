@@ -1,0 +1,48 @@
+<v-flex>
+
+    <v-title> <b>Page level classification</b> </v-title>
+    <v-divider></v-divider>
+    <v-row>
+        <v-col cols="4">
+            <b>LightGBM Regression Model</b>
+                <v-textarea
+                  clearable
+                  v-model="selected_page_text"
+                  clear-icon="mdi-close-circle"
+                  label="글을 입력해주세요"
+                  value="예측 결과 0인 경우 정보가 더 필요합니다."
+                  rows="12"
+                ></v-textarea>
+
+        </v-col>
+
+        <v-col cols="2">
+            <v-img
+                max-height="80"
+                max-width="100"
+                src="https://earlyyearsshop.ie/wp-content/uploads/2020/06/Stencil-arrow.jpg"
+                style="margin-top:150px; margin-left:80px;"
+            >
+            </v-img>
+        </v-col>
+
+        <v-col cols="3">
+            <div style="font-weight: bold; font-size:30px; text-align: center;">
+            예측 Level
+            </div>
+
+            <div style="margin-top:80px; text-align: center;">
+            <span
+                id="predicted_level"
+                style= "font-size:50px;">
+                0
+            </span>
+            </div>
+        </v-col>
+    </v-row>
+
+    <v-btn style='margin:10px;'
+       small class="ml-5"
+       @click="predict_text">Predict Level</v-btn>
+
+</v-flex>

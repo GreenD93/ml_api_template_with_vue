@@ -1,0 +1,38 @@
+<v-flex>
+    <v-title> <b>Page text detection</b> </v-title>
+    <v-divider></v-divider>
+
+    <v-file-input
+            id="file"
+            placeholder="Upload file"
+            label="File input"
+            filled
+            prepend-icon="mdi-camera"
+            @change="onChangeImages"
+    ></v-file-input>
+
+    <v-btn style='margin:10px;'
+           small class="ml-5"
+           @click="analyze_img">Analyze img</v-btn>
+
+    <v-container>
+            <v-row>
+                <v-col>
+                    <div align='center' style='margin-top:20px;'>
+                        <p align='center'> <b> Input </b> </p>
+                        <img align='center' id='input_image' style='width:350px; height:400px'
+                             :src="imageUrl_input" alt="input image"/>
+                    </div>
+                </v-col>
+
+                <v-col>
+                    <div align='center' style='margin-top:20px;'>
+                        <p align='center'> <b> Output </b> </p>
+                        <img align='center' id='result' style='width:350px; height:400px'
+                             :src="imageUrl_output" alt="output image" />
+                    </div>
+                </v-col>
+            </v-row>
+        </v-container>
+
+</v-flex>

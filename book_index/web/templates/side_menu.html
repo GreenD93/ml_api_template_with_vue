@@ -1,0 +1,26 @@
+<v-navigation-drawer
+    permanent
+    expand-on-hover
+  >
+
+<v-list>
+  <v-list-item class="px-2">
+    <v-list-item-avatar>
+      <v-img src="https://blog.kakaocdn.net/dn/muo6M/btqEdwGZLwc/PE29oZ4LNIKPCykrBK18H0/img.jpg"></v-img>
+    </v-list-item-avatar>
+    <v-list-item-title>DEMO</v-list-item-title>
+  </v-list-item>
+</v-list>
+
+<v-list nav dense>
+    <template v-for="(item) in menu.items">
+      <v-list-item @click="select_tab(item.tab)">
+        <v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>{{ item.text }}</v-list-item-title>
+      </v-list-item>
+    </template>
+</v-list>
+
+</v-navigation-drawer>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<base href="/" />
+<html>
+<head>
+    <!--    Install Material Icons-->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <!--    Install Material Icons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+    <v-app id="app">
+
+        <template>
+            <v-row>
+                <v-col cols="2">
+
+                    {% include 'side_menu.html' %}
+
+                </v-col>
+
+                <v-col cols="6">
+                    <!-- Page level classifiation / Regression -->
+                    <text-box v-if="menu.tab==MENU_BOOK_LEVEL"></text-box>
+
+                    <!-- Page text detection -->
+                    <page-text v-if="menu.tab==MENU_PAGE_IMG"></page-text>
+
+                </v-col>
+
+        </v-row>
+        </template>
+
+    </v-app>
+</div>
+
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>{% include 'static/constants.js' %}</script>
+
+    <!-- 컴포넌트 추가시 여기에 -->
+    <script>{% include 'wjtb/text_box.js' %}</script>
+    <script>{% include 'wjtb/page_text.js' %}</script>
+    <!-- 컴포넌트 추가시 여기에 -->
+
+    <script>{% include 'static/main.js' %}</script>
+
+</html>

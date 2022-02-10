@@ -1,0 +1,11 @@
+pandas
+pymysql
+PyAthena
+pyyaml
+sklearn
+lightgbm
+bayesian-optimization
+gensim
+Image
+flask
+flask_cors

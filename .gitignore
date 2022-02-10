@@ -1,0 +1,10 @@
+## Ignore File
+.ipynb_checkpoints
+__pycache__
+*.idea
+*.iml
+*.xml
+*.pyc
+.DS_Store
+book_index/docs/*
+book_index/data/*
